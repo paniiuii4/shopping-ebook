@@ -1,0 +1,36 @@
+/* =========================
+FILE 3 : script.js
+========================= */
+
+const form = document.getElementById("formPembelian");
+const result = document.getElementById("result");
+
+form.addEventListener("submit", function(e){
+
+  e.preventDefault();
+
+  const nama = document.getElementById("nama").value;
+  const email = document.getElementById("email").value;
+
+  result.style.display = "block";
+
+  result.innerHTML = `
+  
+    <h3>Data Pembelian</h3>
+
+    <p><strong>Nama:</strong> ${nama}</p>
+
+    <p><strong>Email:</strong> ${email}</p>
+
+    <br>
+
+    <p>
+      Terimakasihh sudah membeli produk ebook digital dari kamii,
+      semoga bermanfaat.
+    </p>
+
+  `;
+
+  form.reset();
+
+});
