@@ -1,0 +1,245 @@
+/* =========================
+FILE 2 : style.css
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Quicksand', sans-serif;
+  background:#f7f1e8;
+  color:#5b4636;
+  line-height:1.7;
+}
+
+/* NAVBAR */
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(8px);
+  padding:18px 8%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  z-index:1000;
+  border-bottom:1px solid #d8c6b3;
+}
+
+.logo{
+  font-family:'Cormorant Garamond', serif;
+  font-size:34px;
+  font-weight:700;
+  color:#6a513f;
+}
+
+nav a{
+  text-decoration:none;
+  margin-left:25px;
+  color:#5b4636;
+  font-weight:600;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#7c9b7a;
+}
+
+section{
+  min-height:100vh;
+  padding:120px 10%;
+}
+
+/* HOME */
+
+.home{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+.home-text{
+  flex:1;
+}
+
+.home-text h1{
+  font-family:'Cormorant Garamond', serif;
+  font-size:68px;
+  margin-bottom:20px;
+  line-height:1.1;
+}
+
+.home-text p{
+  margin-bottom:30px;
+  max-width:550px;
+}
+
+.home-image{
+  flex:1;
+  text-align:center;
+}
+
+.home-image img{
+  width:100%;
+  max-width:420px;
+  border-radius:25px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* BUTTON */
+
+.btn{
+  display:inline-block;
+  padding:14px 30px;
+  background:#7c9b7a;
+  color:white;
+  text-decoration:none;
+  border:none;
+  border-radius:30px;
+  transition:0.3s;
+  cursor:pointer;
+}
+
+.btn:hover{
+  background:#617d5f;
+  transform:translateY(-3px);
+}
+
+/* TITLE */
+
+.title{
+  text-align:center;
+  margin-bottom:50px;
+  font-family:'Cormorant Garamond', serif;
+  font-size:52px;
+}
+
+/* ABOUT */
+
+.about-box{
+  background:#fffaf4;
+  padding:40px;
+  border-radius:25px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.about-box h3{
+  margin-top:20px;
+  color:#7c9b7a;
+}
+
+/* PRODUK */
+
+.product-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:#fffaf4;
+  border-radius:20px;
+  overflow:hidden;
+  transition:0.3s;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+}
+
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+.card-content{
+  padding:20px;
+}
+
+.card-content h3{
+  font-family:'Cormorant Garamond', serif;
+  font-size:30px;
+}
+
+.price{
+  color:#7c9b7a;
+  font-weight:bold;
+  margin:10px 0;
+}
+
+/* KONTAK */
+
+.contact-box{
+  background:#fffaf4;
+  padding:40px;
+  border-radius:25px;
+  max-width:600px;
+  margin:auto;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.contact-number{
+  margin:15px 0 25px;
+  color:#7c9b7a;
+  font-weight:bold;
+}
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+input{
+  padding:15px;
+  border:none;
+  border-radius:12px;
+  background:#efe4d5;
+  outline:none;
+}
+
+#result{
+  display:none;
+  margin-top:25px;
+  background:#e7f0e5;
+  padding:20px;
+  border-radius:15px;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#e5d6c4;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .home{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .home-text h1{
+    font-size:50px;
+  }
+
+  header{
+    flex-direction:column;
+    gap:15px;
+  }
+
+}
